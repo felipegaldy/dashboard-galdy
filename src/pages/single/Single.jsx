@@ -1,7 +1,56 @@
-import './single.scss';
-
+import "./single.scss";
+import Sidebar from "../../components/sidebar/Sidebar";
+import Navbar from "../../components/navbar/Navbar";
+import Chart from "../../components/chart/Chart";
+import List from "../../components/table/Table";
 export const Single = () => {
   return (
-    <div>Single</div>
-  )
-}
+    <div className="single">
+      <Sidebar />
+      <div className="singleContainer">
+        <Navbar />
+        <div className="top">
+          <div className="left">
+            <div className="editButton">Edit</div>
+            <h1 className="title">Informações</h1>
+            <div className="item">
+              <img
+                src="https://avatars.githubusercontent.com/u/99551212?v=4"
+                alt=""
+                className="itemImg"
+              />
+              <div className="details">
+                <h1 className="itemTitle">Felipe Silveira</h1>
+                <div className="detailItem">
+                  <span className="itemKey">Email: </span>
+                  <span className="itemValue">
+                    felipe.silveira@fatec.sp.gov.br
+                  </span>
+                </div>
+                <div className="detailItem">
+                  <span className="itemKey">Phone: </span>
+                  <span className="itemValue">(11) 98395-9562</span>
+                </div>
+                <div className="detailItem">
+                  <span className="itemKey">Endereço: </span>
+                  <span className="itemValue">R. 123 SP - São Paulo</span>
+                </div>
+                <div className="detailItem">
+                  <span className="itemKey">Pais: </span>
+                  <span className="itemValue">Brasil</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="right">
+            <Chart aspect={3/1} title="Usuario últimos 6 meses" />
+          </div>
+        </div>
+        <div className="bottom">
+        <h1 className="title">Últimas transações</h1>
+          <List />
+        </div>
+      </div>
+    </div>
+  );
+};

@@ -4,10 +4,12 @@ import { Navbar } from '../../components/navbar/Navbar'
 import { Widget } from '../../components/widget/Widget'
 import { Featured } from '../../components/featured/Featured'
 import { Chart } from '../../components/chart/Chart'
+import { List } from '../../components/table/Table'
+
 
 export const Home = () => {
   return (
-    <div className='home'>
+    <div className='home'> 
       <Sidebar />
       <div className="homeContainer">
         <Navbar />
@@ -19,7 +21,11 @@ export const Home = () => {
         </div>
         <div className="charts">
           <Featured />
-          <Chart />
+          <Chart aspect={2/1} title='Vendas nos últimos 6 meses' />
+        </div>
+        <div className="listContainer">
+          <div className="listTitle">Últimas Transações</div>
+          <List /> 
         </div>
       </div>
     </div>

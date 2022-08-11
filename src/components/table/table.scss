@@ -1,0 +1,33 @@
+.table{
+    .cellWrapper{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .image{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+    }
+
+    .status{
+        padding: 5px;
+        border-radius: 5px;
+        &.Aprovado{
+            color: #00b300;
+            background-color: #00b30059;
+        }
+        &.Reprovado{
+            color: #ff0000;
+            background-color: #ff000059;
+        }
+        &.Pendente{
+            color: #ffc107;
+            background-color: #ffc10759;
+        }
+
+    }
+
+}
